@@ -23,7 +23,6 @@ class Product {
     const PRODUCT_K = 'ProductK';
     const PRODUCT_L = 'ProductL';
     const PRODUCT_M = 'ProductM';
-    const PRODUCT_N = 'ProductN';
     
     /**
      * List of hardcoded prices
@@ -44,7 +43,6 @@ class Product {
         Product::PRODUCT_K => 11,
         Product::PRODUCT_L => 22,
         Product::PRODUCT_M => 92,
-        Product::PRODUCT_N => 13,
     );
     
     /**

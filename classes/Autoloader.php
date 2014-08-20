@@ -2,7 +2,7 @@
 /**
  * PSR-0 compaint autoloader
  * Usage:
- * $autoloader = new Autoloader('/path/to/classes');
+ * $autoloader = new Autoloader('/path/to/classes/');
  * $autoloader->register();
  */
 class Autoloader {
@@ -16,7 +16,7 @@ class Autoloader {
     /**
      * Constructor
      *
-     * @var $pathPrefix Files path prefix. No leading slash
+     * @var $pathPrefix Files path prefix, with leading slash
      */
     public function __construct($pathPrefix) {
         $this->pathPrefix = $pathPrefix;
@@ -41,8 +41,8 @@ class Autoloader {
         } else {
             $path = str_replace('_', DIRECTORY_SEPARATOR, $className);
         }
-        if ( file_exists($this->pathPrefix.$path) ) {
-            include($this->pathPrefix.$path);
+        if ( file_exists($this->pathPrefix.$path.'.php') ) {
+            include($this->pathPrefix.$path.'.php');
         }
     }
     
